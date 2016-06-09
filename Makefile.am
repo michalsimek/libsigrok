@@ -299,6 +299,12 @@ src_libdrivers_la_SOURCES += \
 	src/hardware/fluke-45/protocol.c \
 	src/hardware/fluke-45/api.c
 endif
+if HW_GENERIC_IIO
+libsigrok_la_SOURCES += \
+	src/hardware/generic-iio/protocol.h \
+	src/hardware/generic-iio/protocol.c \
+	src/hardware/generic-iio/api.c
+endif
 if HW_FLUKE_DMM
 src_libdrivers_la_SOURCES += \
 	src/hardware/fluke-dmm/protocol.h \

@@ -130,6 +130,9 @@ SR_ARG_OPT_CHECK([libieee1284], [LIBIEEE1284],, [
 AS_IF([test "x$sr_have_libieee1284" = xyes],
 	[SR_PREPEND([SR_EXTRA_LIBS], [-lieee1284])])
 
+SR_ARG_OPT_PKG([libiio], [LIBIIO], [NEED_IIO],
+	[libiio >= 0.6])
+
 ######################
 ##  Feature checks  ##
 ######################
@@ -238,6 +241,7 @@ SR_DRIVER([Fluke 45], [fluke-45])
 SR_DRIVER([Fluke DMM], [fluke-dmm], [libserialport])
 SR_DRIVER([FTDI LA], [ftdi-la], [libusb libftdi])
 SR_DRIVER([fx2lafw], [fx2lafw], [libusb])
+SR_DRIVER([Generic IIO], [generic-iio], [libiio])
 SR_DRIVER([GMC MH 1x/2x], [gmc-mh-1x-2x], [libserialport])
 SR_DRIVER([GW Instek GDS-800], [gwinstek-gds-800], [libserialport])
 SR_DRIVER([GW Instek GPD], [gwinstek-gpd], [libserialport])
