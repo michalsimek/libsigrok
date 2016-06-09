@@ -74,6 +74,9 @@ extern SR_PRIV struct sr_dev_driver flukedmm_driver_info;
 #ifdef HAVE_HW_FX2LAFW
 extern SR_PRIV struct sr_dev_driver fx2lafw_driver_info;
 #endif
+#ifdef HAVE_HW_GENERIC_IIO
+extern SR_PRIV struct sr_dev_driver generic_iio_driver_info;
+#endif
 #ifdef HAVE_HW_GMC_MH_1X_2X
 extern SR_PRIV struct sr_dev_driver gmc_mh_1x_2x_rs232_driver_info;
 extern SR_PRIV struct sr_dev_driver gmc_mh_2x_bd232_driver_info;
@@ -234,6 +237,9 @@ SR_PRIV struct sr_dev_driver **drivers_lists[] = {
 #endif
 #ifdef HAVE_HW_FX2LAFW
 	(DRVS) {&fx2lafw_driver_info, NULL},
+#endif
+#ifdef HAVE_HW_GENERIC_IIO
+	(DRVS) {&generic_iio_driver_info, NULL},
 #endif
 #ifdef HAVE_HW_GMC_MH_1X_2X
 	(DRVS) {
